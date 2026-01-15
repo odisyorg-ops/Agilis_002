@@ -2,9 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const Footer = () => {
-  // Clamp function for the large CTA heading
-  // Min: 2rem, Preferred: 4vw, Max: 4.5rem
-  const ctaHeadingSize = "clamp(2rem, 4vw, 4.5rem)";
+  // Apple Typography Scale
+  const ctaHeadingSize = "clamp(2.5rem, 5vw, 4.5rem)";
 
   const navLinks = [
     { name: "About", href: "/about" },
@@ -18,97 +17,106 @@ const Footer = () => {
   const socialLinks = ["Instagram", "Facebook", "YouTube"];
 
   return (
-    <footer className="bg-black text-white py-16 md:py-24 overflow-hidden">
-      <div className="w-[90vw] md:w-[80vw] mx-auto space-y-6">
-        {/* Logo */}
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                <div className="w-4 h-4 border-2 border-black rounded-sm rotate-45"></div>
-              </div>
-              <span className="text-2xl font-bold tracking-tighter">AGILIS</span>
-            </div>
-        {/* CTA SECTION - Relative Stack */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12  border-b border-gray-800 pb-20">
+    <footer className="relative bg-[#0a0a0b] text-white min-h-fit lg:h-screen flex flex-col justify-between overflow-hidden antialiased">
+      
+      {/* Background Watermark (Desktop only) */}
+      <div className="hidden lg:block absolute inset-0 pointer-events-none select-none">
+        <h1 className="absolute bottom-[-5%] left-[-5%] text-[25vw] font-black text-white/[0.03] leading-none tracking-tighter">
+          AGILIS
+        </h1>
+      </div>
+
+      <div className="relative z-10 w-[90vw] md:w-[80vw] mx-auto pt-24 md:pt-32 flex-grow flex flex-col justify-center">
+        
+        {/* Top Section: Logo */}
+        <div className="flex items-center gap-3 mb-12 md:mb-20">
+          <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+            <div className="w-5 h-5 border-2 border-black rounded-sm rotate-45"></div>
+          </div>
+          <span className="text-[24px] font-bold tracking-tighter">AGILIS</span>
+        </div>
+
+        {/* MAIN CONTENT GRID */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-end pb-20 border-b border-white/10">
           
-          {/* Left Side: Logo & Big Heading */}
+          {/* Left Side: Massive Heading */}
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="space-y-8"
+            transition={{ duration: 0.8 }}
+            className="space-y-10"
           >
-            
-
-            {/* Main Heading with Gradient */}
             <h2 
               style={{ fontSize: ctaHeadingSize }}
-              className="font-black leading-[1.1] tracking-tighter max-w-full"
+              className="font-bold leading-[1.02] tracking-tighter max-w-2xl"
             >
               Ready to unlock your potential and{" "}
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-200 via-blue-400 to-white">
+              <span className="bg-clip-text text-transparent bg-gradient-to-b from-blue-300 to-blue-600">
                 achieve your goals with us?
               </span>
             </h2>
 
-            {/* Social Pills */}
+            {/* Social Pills: Apple Secondary Style */}
             <div className="flex flex-wrap gap-3">
               {socialLinks.map((social) => (
-                <a
+                <motion.a
                   key={social}
                   href={`#${social}`}
-                  className="px-5 py-2 border border-gray-700 rounded-full text-sm font-medium hover:bg-white hover:text-black transition-all duration-300"
+                  whileHover={{ scale: 1.05, backgroundColor: "#fff", color: "#000" }}
+                  className="px-6 py-2 border border-white/20 rounded-full text-[14px] font-medium transition-all duration-300"
                 >
                   {social}
-                </a>
+                </motion.a>
               ))}
             </div>
           </motion.div>
 
-          {/* Right Side: Links & Action */}
+          {/* Right Side: Navigation & Primary Action */}
           <motion.div 
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="flex flex-col items-start space-y-10"
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="flex flex-col items-start lg:items-end space-y-12"
           >
-            {/* Navigation Grid */}
-            <nav className="flex flex-wrap gap-x-8 gap-y-4 justify-start lg:justify-end">
+            {/* Nav: Sharp Typography */}
+            <nav className="flex flex-wrap gap-x-10 gap-y-4 justify-start lg:justify-end">
               {navLinks.map((link) => (
                 <a 
                   key={link.name} 
                   href={link.href}
-                  className="text-lg font-bold hover:text-blue-400 transition-colors"
+                  className="text-[17px] font-semibold text-white/70 hover:text-white transition-colors tracking-tight"
                 >
                   {link.name}
                 </a>
               ))}
             </nav>
 
-            {/* Description Text */}
-            <p className="text-gray-400 text-left  max-w-sm leading-relaxed text-sm md:text-base">
+            {/* Description: Apple Muted Gray */}
+            <p className="text-[#86868b] text-left lg:text-right max-w-sm leading-relaxed text-[16px] md:text-[18px] tracking-tight">
               Contact us now to schedule a consultation and discover how our expertise 
-              can make a difference for you. Together, we can create success.
+              can make a difference for you.
             </p>
 
-            {/* Large White Pill Button */}
+            {/* Action Button: High-end White Pill */}
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-white text-black text-lg md:text-xl font-black px-10 py-5 rounded-full shadow-2xl shadow-blue-500/10 transition-transform"
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+              className="bg-white text-black text-[17px] font-bold px-12 py-5 rounded-full shadow-2xl shadow-blue-500/20 transition-all"
             >
               Let's Get Started Today
             </motion.button>
           </motion.div>
         </div>
+      </div>
 
-        {/* BOTTOM BAR: Copyright */}
-        <div className="pt-10 flex flex-col md:flex-row justify-between items-center gap-6 text-gray-500 text-sm">
-          <p>© AGILIS. All rights reserved</p>
-          <p className="font-medium">
-            Designed by <span className="text-white">ODISY</span>
-          </p>
-        </div>
-
+      {/* BOTTOM BAR: Minimal Copyright */}
+      <div className="relative z-10 w-[90vw] md:w-[80vw] mx-auto py-10 flex flex-col md:flex-row justify-between items-center gap-6 text-[#86868b] text-[14px]">
+        <p>© 2026 AGILIS. All rights reserved</p>
+        <p className="font-medium">
+          Designed by <span className="text-white">ODISY</span>
+        </p>
       </div>
     </footer>
   );

@@ -18,7 +18,7 @@ const Navbar = () => {
     <nav className="sticky top-0 z-[100] w-full bg-white/80 backdrop-blur-xl border-b border-gray-100 antialiased">
       {/* Container aligned with your 80vw sections */}
       <div className="w-[95vw] md:w-[80vw] mx-auto h-20 flex justify-between items-center">
-        
+
         {/* Logo */}
         <div className="text-[24px] md:text-[26px] font-bold tracking-tighter">
           <Link to="/" className="text-[#1d1d1f] hover:opacity-70 transition-opacity">
@@ -28,15 +28,15 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex gap-12 items-center">
-          <Link 
-            to="/about" 
+          <Link
+            to="/about"
             className="text-[16px] font-medium text-[#1d1d1f] hover:text-blue-600 transition-colors"
           >
             About
           </Link>
 
           {/* Solutions Dropdown */}
-          <div 
+          <div
             className="relative h-20 flex items-center"
             onMouseEnter={() => setIsSolutionsOpen(true)}
             onMouseLeave={() => setIsSolutionsOpen(false)}
@@ -77,8 +77,8 @@ const Navbar = () => {
             </AnimatePresence>
           </div>
 
-          <Link 
-            to="/blogs" 
+          <Link
+            to="/blogs"
             className="text-[16px] font-medium text-[#1d1d1f] hover:text-blue-600 transition-colors"
           >
             Blog
@@ -87,16 +87,18 @@ const Navbar = () => {
 
         {/* Right Side: CTA & Mobile Toggle */}
         <div className="flex items-center gap-4">
-          <motion.button 
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="hidden sm:block bg-[#1d1d1f] text-white px-7 py-2.5 rounded-full font-semibold text-[15px] hover:bg-[#323234] transition-all shadow-lg shadow-black/5"
-          >
-            Get in Touch
-          </motion.button>
+          <Link to="/contact" className="block w-full mt-4">
+            <motion.button
+              whileHover={{ scale: 1.02, filter: "brightness(1.1)" }}
+              whileTap={{ scale: 0.98 }}
+              className="w-full py-3 px-4 rounded-4xl bg-gradient-to-br from-[#0f172a] to-[#1e40af] text-white font-bold text-mg shadow-md shadow-blue-900/50"
+            >
+              Get in Touch
+            </motion.button>
+          </Link>
 
           {/* Mobile Menu Toggle */}
-          <button 
+          <button
             className="md:hidden p-2 text-[#1d1d1f]"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
@@ -125,9 +127,15 @@ const Navbar = () => {
                 ))}
               </div>
               <Link to="/blogs" className="text-2xl font-bold text-[#1d1d1f]">Blog</Link>
-              <button className="w-full bg-[#1d1d1f] text-white py-4 rounded-2xl font-bold text-lg mt-4">
-                Get in Touch
-              </button>
+              <Link to="/contact" className="block w-full mt-4">
+                <motion.button
+                  whileHover={{ scale: 1.02, filter: "brightness(1.1)" }}
+                  whileTap={{ scale: 0.98 }}
+                  className="w-full py-4 rounded-2xl bg-gradient-to-br from-[#0f172a] to-[#1e40af] text-white font-bold text-lg shadow-xl shadow-blue-900/50"
+                >
+                  Get in Touch
+                </motion.button>
+              </Link>
             </div>
           </motion.div>
         )}

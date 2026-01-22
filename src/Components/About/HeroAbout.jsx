@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const AboutHero = () => {
+const HeroAbout = () => {
   // Apple Display typography scale
   const headingSize = "clamp(3rem, 8vw, 6rem)";
 
@@ -33,4 +33,4 @@ const AboutHero = () => {
   );
 };
 
-export default AboutHero;
+export default HeroAbout;

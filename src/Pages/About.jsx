@@ -18,7 +18,6 @@ const About = () => {
             <ERPSection />
             <TeamTechArm />
             <FoundationSection />
-            <Footer />
         </main>
     );
 };

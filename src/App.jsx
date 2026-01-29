@@ -2,6 +2,7 @@ import React from 'react';
 import { ReactLenis } from 'lenis/react';
 import { Outlet } from 'react-router-dom';
 import Navbar from './GlobalComponent/Navbar';
+import Footer from './Components/Home/Footer';
 
 function App() {
   const lenisOptions = {
@@ -23,6 +24,7 @@ function App() {
         <main className="flex-grow">
           <Outlet />
         </main>
+        <Footer></Footer>
 
         {/* Global Footer */}
       </div>

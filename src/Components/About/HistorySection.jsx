@@ -1,10 +1,11 @@
 import React from 'react';
+import heroImage from "../../assets/Professional at Work.png"
 
 const HistorySection = () => {
     return (
         <section className="py-20 bg-[#f5f5f7]/50 px-4">
             <div className="w-[95vw] md:w-[80vw] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-                <div className="aspect-video bg-gray-200 rounded-[2.5rem] shadow-inner" /> {/* Replaceable Image */}
+                <div style={{ backgroundImage: `url(${heroImage})` }} className="aspect-video bg-gray-200 rounded-xl bg-cover shadow-inner" /> {/* Replaceable Image */}
                 <div className="space-y-8">
                     <h2 className="text-[32px] md:text-[42px] font-bold tracking-tight text-[#1d1d1f]">The beginning</h2>
                     <p className="text-[#86868b] text-lg leading-relaxed">

@@ -1,33 +1,46 @@
 import React from "react";
-import { motion } from "framer-motion";
 
 const HeroAbout = () => {
-  // Apple Display typography scale
-  const headingSize = "clamp(3rem, 8vw, 6rem)";
+  // Balanced typography for a clean, expert presence
+  const headingSize = "text-[34px] md:text-[56px]";
 
   return (
-    <section className="py-24 md:py-32 bg-white px-4 antialiased">
-      <div className="w-[95vw] md:w-[80vw] mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-4xl"
-        >
+    <section className="relative h-[80vh] min-h-[600px] flex items-center bg-black px-4 antialiased overflow-hidden">
+      
+      {/* Background Image Container */}
+      <div className="absolute inset-0 z-0">
+        {/* Placeholder for your future image */}
+        <div className="w-full h-full bg-[#080808]" /> 
+        {/* <div className="w-full h-full bg-[radial-gradient(circle_at_50%_0%,#111827_40%,#000000_90%)]" /> */}
+        {/* Dark bottom-to-top gradient: Ensures legibility against any image */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+      </div>
+
+      <div className="w-[95vw] md:w-[80vw] mx-auto relative z-10">
+        <div className="max-w-4xl">
+          {/* Top Label: Adds a touch of editorial structure */}
+          <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-blue-500 mb-6 block">
+            The Agilis Story
+          </span>
+
           <h1 
-            style={{ fontSize: headingSize }}
-            className="font-bold tracking-tighter leading-[1.02] mb-8 text-[#1d1d1f]"
+            className={`${headingSize} font-bold tracking-tighter leading-[1.05] mb-8 text-white`}
           >
             Guided by purpose. <br />
-            {/* Updated: Using the Sapphire Mesh gradient from your contact button */}
-            <span className="bg-clip-text text-transparent bg-gradient-to-br from-[#0f172a] to-[#1e40af]">
+            <span className="bg-clip-text text-transparent bg-gradient-to-br from-[#1e40af] to-[#60a5fa]">
               Defined by partnership.
             </span>
           </h1>
-          <p className="text-[#86868b] text-[19px] md:text-[24px] font-medium leading-relaxed tracking-tight max-w-2xl">
+          
+          <p className="text-[#a1a1a6] text-[18px] md:text-[21px] font-medium leading-relaxed tracking-tight max-w-2xl">
             Agilis is a reliable long-term solution-oriented tech ally, specializing in custom-tailored web platforms, mobile apps, IOT, and AI-driven software.
           </p>
-        </motion.div>
+        </div>
+      </div>
+
+      {/* Optional: Subtle Scroll Indicator (Common in 100vh designs) */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
+        <div className="w-px h-12 bg-gradient-to-b from-blue-600 to-transparent opacity-50" />
       </div>
     </section>
   );

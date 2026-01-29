@@ -89,9 +89,8 @@ const Navbar = () => {
         <div className="flex items-center gap-4">
           <Link to="/contact" className="block w-full mt-4">
             <motion.button
-              whileHover={{ scale: 1.02, filter: "brightness(1.1)" }}
               whileTap={{ scale: 0.98 }}
-              className="w-full py-3 px-4 rounded-4xl bg-gradient-to-br from-[#0f172a] to-[#1e40af] text-white font-bold text-mg shadow-md shadow-blue-900/50"
+              className="w-full py-3 px-6 rounded-4xl bg-gradient-to-br from-[#0f172a] to-[#1e40af] text-white font-bold text-mg shadow-md shadow-blue-900/50"
             >
               Get in Touch
             </motion.button>

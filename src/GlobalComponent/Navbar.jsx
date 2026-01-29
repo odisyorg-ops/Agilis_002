@@ -33,7 +33,7 @@ const Navbar = () => {
           <Link to="/process" className={navLinkStyle}>
             Process
           </Link>
-          <Link to="/blogs0" className={navLinkStyle}>
+          <Link to="/blogs" className={navLinkStyle}>
             Blog
           </Link>
         </div>

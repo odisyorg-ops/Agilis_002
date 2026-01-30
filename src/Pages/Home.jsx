@@ -1,4 +1,5 @@
 import Banner from "../Components/Banner";
+import ContactUs from "../Components/ContactUs";
 import Features from "../Components/Home/Features";
 import Footer from "../Components/Home/Footer";
 import SolutionsSection from "../Components/Home/SolutionsSection";
@@ -25,7 +26,7 @@ const Home = () => {
         <TeamSection />
         <Values />
       </div>
-
+<ContactUs></ContactUs>
       <Footer />
     </main>
   );

@@ -1,4 +1,5 @@
 import React from 'react';
+import techImage from "../../assets/Modern Meeting Room.png"
 
 const TeamTechArm = () => {
     const roles = ["Product Owners", "Project Managers", "UI/UX Innovators", "Full-stack Developers", "Cloud Architects", "QA Experts"];
@@ -23,7 +24,7 @@ const TeamTechArm = () => {
                         ))}
                     </div>
                 </div>
-                <div className="aspect-square bg-white/5 rounded-[3rem] border border-white/10" /> {/* Replaceable Image */}
+                <div style={{ backgroundImage: `url(${techImage})` }} className="aspect-square bg-cover rounded-xl " /> {/* Replaceable Image */}
             </div>
         </section>
     );

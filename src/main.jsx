@@ -6,33 +6,40 @@ import './index.css';
 import App from './App.jsx';
 import Home from './Pages/Home.jsx';
 import About from './Pages/About.jsx';
+import Solution from './Pages/Solution.jsx';
 import ContactPage from './Pages/ContactPage.jsx';
+import Blogs from './Pages/Blogs.jsx';
+import BlogPost from './Components/Blog/BlogPost.jsx';
 
-// Define your routes
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />, // App acts as the Layout
+    element: <App />, 
     children: [
       {
         path: "/",
-        element: <Home></Home>,
+        element: <Home />,
       },
       {
         path: "about",
-        element: <About></About>,
+        element: <About />,
       },
       {
         path: "services",
-        element: <h2>Our Services</h2>,
+        element: <Solution />,
       },
       {
         path: "blogs",
-        element: <h2>Latest Blog Posts</h2>,
+        element: <Blogs />,
+      },
+      {
+        /* 2. Add the dynamic route for single blog posts */
+        path: "blogs/:id", 
+        element: <BlogPost />,
       },
       {
         path: "contact",
-        element: <ContactPage></ContactPage>,
+        element: <ContactPage />,
       },
     ],
   },

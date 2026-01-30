@@ -1,22 +1,16 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const solutionLinks = [
-    { name: "Investment Strategies", href: "/services/investment" },
-    { name: "Financial Planning", href: "/services/planning" },
-    { name: "Insurance & Annuities", href: "/services/insurance" },
-    { name: "Integrated Technology", href: "/services/tech" },
-  ];
+  // Link style to keep code DRY
+  const navLinkStyle = "text-[16px] font-medium text-[#1d1d1f] hover:text-blue-600 transition-colors";
 
   return (
     <nav className="sticky top-0 z-[100] w-full bg-white/80 backdrop-blur-xl border-b border-gray-100 antialiased">
-      {/* Container aligned with your 80vw sections */}
       <div className="w-[95vw] md:w-[80vw] mx-auto h-20 flex justify-between items-center">
 
         {/* Logo */}
@@ -28,70 +22,28 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex gap-12 items-center">
-          <Link
-            to="/about"
-            className="text-[16px] font-medium text-[#1d1d1f] hover:text-blue-600 transition-colors"
-          >
+          <Link to="/about" className={navLinkStyle}>
             About
           </Link>
 
-          {/* Solutions Dropdown */}
-          <div
-            className="relative h-20 flex items-center"
-            onMouseEnter={() => setIsSolutionsOpen(true)}
-            onMouseLeave={() => setIsSolutionsOpen(false)}
-          >
-            <button className="flex items-center gap-1.5 text-[16px] font-medium text-[#1d1d1f] hover:text-blue-600 transition-colors cursor-pointer">
-              Solutions
-              <motion.div
-                animate={{ rotate: isSolutionsOpen ? 180 : 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                <ChevronDown size={16} strokeWidth={2.5} />
-              </motion.div>
-            </button>
+          <Link to="/services" className={navLinkStyle}>
+            Services
+          </Link>
 
-            {/* Dropdown Menu - Fixed flicker with pt-4 to bridge the gap */}
-            <AnimatePresence>
-              {isSolutionsOpen && (
-                <motion.div
-                  initial={{ opacity: 0, y: 15 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 15 }}
-                  transition={{ duration: 0.2, ease: "circOut" }}
-                  className="absolute left-0 top-full pt-2 w-64"
-                >
-                  <div className="bg-white border border-gray-100 rounded-3xl shadow-2xl shadow-gray-200/60 p-3 overflow-hidden">
-                    {solutionLinks.map((link) => (
-                      <Link
-                        key={link.name}
-                        to={link.href}
-                        className="block px-5 py-3.5 text-[15px] font-medium text-[#1d1d1f] hover:bg-blue-50 hover:text-blue-600 rounded-2xl transition-all duration-200"
-                      >
-                        {link.name}
-                      </Link>
-                    ))}
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-
-          <Link
-            to="/blogs"
-            className="text-[16px] font-medium text-[#1d1d1f] hover:text-blue-600 transition-colors"
-          >
+          <Link to="/process" className={navLinkStyle}>
+            Process
+          </Link>
+          <Link to="/blogs" className={navLinkStyle}>
             Blog
           </Link>
         </div>
 
         {/* Right Side: CTA & Mobile Toggle */}
         <div className="flex items-center gap-4">
-          <Link to="/contact" className="block w-full mt-4">
+          <Link to="/contact" className="hidden md:block">
             <motion.button
-              whileHover={{ scale: 1.02, filter: "brightness(1.1)" }}
               whileTap={{ scale: 0.98 }}
-              className="w-full py-3 px-4 rounded-4xl bg-gradient-to-br from-[#0f172a] to-[#1e40af] text-white font-bold text-mg shadow-md shadow-blue-900/50"
+              className="py-3 px-6 rounded-full bg-gradient-to-br from-[#0f172a] to-[#1e40af] text-white font-bold text-sm shadow-md shadow-blue-900/20"
             >
               Get in Touch
             </motion.button>
@@ -116,25 +68,33 @@ const Navbar = () => {
             exit={{ height: 0, opacity: 0 }}
             className="md:hidden bg-white border-t border-gray-100 overflow-hidden"
           >
-            <div className="px-[5%] py-8 flex flex-col gap-6">
-              <Link to="/about" className="text-2xl font-bold text-[#1d1d1f]">About</Link>
-              <div className="flex flex-col gap-4">
-                <span className="text-sm font-bold text-gray-400 uppercase tracking-widest">Solutions</span>
-                {solutionLinks.map((link) => (
-                  <Link key={link.name} to={link.href} className="text-xl font-semibold text-[#1d1d1f]">
-                    {link.name}
-                  </Link>
-                ))}
-              </div>
-              <Link to="/blogs" className="text-2xl font-bold text-[#1d1d1f]">Blog</Link>
-              <Link to="/contact" className="block w-full mt-4">
-                <motion.button
-                  whileHover={{ scale: 1.02, filter: "brightness(1.1)" }}
-                  whileTap={{ scale: 0.98 }}
-                  className="w-full py-4 rounded-2xl bg-gradient-to-br from-[#0f172a] to-[#1e40af] text-white font-bold text-lg shadow-xl shadow-blue-900/50"
-                >
+            <div className="px-[5%] py-10 flex flex-col gap-8">
+              <Link 
+                to="/about" 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-3xl font-bold text-[#1d1d1f]"
+              >
+                About
+              </Link>
+              <Link 
+                to="/services" 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-3xl font-bold text-[#1d1d1f]"
+              >
+                Solutions
+              </Link>
+              <Link 
+                to="/blogs" 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-3xl font-bold text-[#1d1d1f]"
+              >
+                Blog
+              </Link>
+              
+              <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
+                <button className="w-full py-4 rounded-2xl bg-gradient-to-br from-[#0f172a] to-[#1e40af] text-white font-bold text-lg">
                   Get in Touch
-                </motion.button>
+                </button>
               </Link>
             </div>
           </motion.div>

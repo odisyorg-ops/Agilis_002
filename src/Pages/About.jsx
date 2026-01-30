@@ -6,6 +6,7 @@ import FoundationSection from '../Components/About/FoundationSection';
 import Footer from '../Components/Home/Footer';
 import PartnershipImpact from '../Components/About/PartnershipImpact';
 import HeroAbout from '../Components/About/HeroAbout';
+import TechPartnerSection from '../Components/About/TechPartnerSection';
 
 const About = () => {
     return (
@@ -13,10 +14,10 @@ const About = () => {
             <HeroAbout></HeroAbout>
             <PartnershipImpact></PartnershipImpact>
             <HistorySection />
+            <TechPartnerSection></TechPartnerSection>
             <ERPSection />
             <TeamTechArm />
             <FoundationSection />
-            <Footer />
         </main>
     );
 };

@@ -3,7 +3,9 @@ import { motion } from "framer-motion";
 
 const VideoSection = () => {
   // Replace this ID with your actual YouTube Video ID
-  const youtubeId = "dQw4w9WgXcQ"; 
+  // const youtubeId = "dQw4w9WgXcQ"; 
+  const youtubeId = "XPc07NSpFqM"; 
+  // https://youtu.be/XPc07NSpFqM
 
   return (
     <section className="py-10 bg-white">
@@ -23,7 +25,7 @@ const VideoSection = () => {
           
           
           {/* The Actual Player */}
-          <div className="relative aspect-video w-full rounded-3xl overflow-hidden shadow-2xl ">
+          <div className="relative aspect-video w-full rounded-xl overflow-hidden shadow-2xl ">
             <iframe
               className="w-full h-full"
               src={`https://www.youtube.com/embed/${youtubeId}?autoplay=0&rel=0`}

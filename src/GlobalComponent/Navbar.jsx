@@ -14,8 +14,9 @@ const Navbar = () => {
       <div className="w-[95vw] md:w-[80vw] mx-auto h-20 flex justify-between items-center">
 
         {/* Logo */}
-        <div className="text-[24px] md:text-[26px] font-bold tracking-tighter">
-          <Link to="/" className="text-[#1d1d1f] hover:opacity-70 transition-opacity">
+        <div className="text-[24px] md:text-[26px] font-bold tracking-tighter flex items-center relative">
+          <Link to="/"><img className="size-40 grayscale brightness-0" src="/src/assets/NEW - WITH BLUE - ALL - 2 MORE SPACE WITH SMALL ICON -F49F1C ORANGE - Copy copy-01.png" alt="AGILIS" /></Link>
+          <Link to="/" className="text-[#1d1d1f] hover:opacity-70 absolute transition-opacity left-28">
             AGILIS
           </Link>
         </div>
@@ -48,7 +49,6 @@ const Navbar = () => {
               Get in Touch
             </motion.button>
           </Link>
-
           {/* Mobile Menu Toggle */}
           <button
             className="md:hidden p-2 text-[#1d1d1f]"
@@ -82,6 +82,13 @@ const Navbar = () => {
                 className="text-3xl font-bold text-[#1d1d1f]"
               >
                 Solutions
+              </Link>
+              <Link 
+                to="/process" 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-3xl font-bold text-[#1d1d1f]"
+              >
+                Process
               </Link>
               <Link 
                 to="/blogs" 

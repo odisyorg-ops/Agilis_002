@@ -11,7 +11,7 @@ const BlogCard = ({ blog }) => {
       <div className="flex flex-col space-y-5">
         
         {/* Visual */}
-        <div className="aspect-[16/10] w-full bg-[#f5f5f7] rounded-[2rem] overflow-hidden border border-gray-100">
+        <div className="aspect-[16/10] w-full bg-[#f5f5f7] rounded-xl overflow-hidden border border-gray-100">
           <img 
             src={blog.image} 
             alt={blog.title} 

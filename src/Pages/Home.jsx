@@ -6,6 +6,7 @@ import Stats from "../Components/Home/Stats";
 import TeamSection from "../Components/Home/TeamSection";
 import Values from "../Components/Home/Values";
 import VideoSection from "../Components/Home/VideoSection";
+import FAQSection from "../GlobalComponent/FAQSection";
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
       <div className="bg-gradient-to-r from-white via-slate-50 to-blue-50/30 overflow-hidden">
         <Features />
         <SolutionsSection />
+        <FAQSection></FAQSection>
         {/* <Stats></Stats> */}
         <TeamSection />
         <Values />

@@ -31,11 +31,11 @@ const BlogPost = () => {
             <header className="pt-32 pb-16 md:pt-48 md:pb-24">
                 <div className="w-[95vw] md:w-[80vw] mx-auto text-center">
                     <div className="mb-8">
-                        <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-blue-600">
+                        <span className="text-[11px] font-bold uppercase tracking-[0.1em] text-blue-600">
                             {blog.category}
                         </span>
                         <span className="mx-3 text-gray-300">•</span>
-                        <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#86868b]">
+                        <span className="text-[11px] font-bold uppercase tracking-[0.1em] text-[#86868b]">
                             {blog.date}
                         </span>
                     </div>
@@ -44,7 +44,7 @@ const BlogPost = () => {
                         {blog.title}
                     </h1>
 
-                    <div className="aspect-[21/9] w-full rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden border border-gray-100 shadow-2xl shadow-blue-900/5">
+                    <div className="aspect-[21/9] w-full rounded-lg md:rounded-xl overflow-hidden border border-gray-100 shadow-2xl shadow-blue-900/5">
                         <img
                             src={blog.image}
                             alt={blog.title}

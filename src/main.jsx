@@ -10,6 +10,8 @@ import Solution from './Pages/Solution.jsx';
 import ContactPage from './Pages/ContactPage.jsx';
 import Blogs from './Pages/Blogs.jsx';
 import BlogPost from './Components/Blog/BlogPost.jsx';
+import Process from './Pages/Process.jsx';
+import LegalComponent from './Pages/LegalComponent.jsx';
 
 const router = createBrowserRouter([
   {
@@ -40,6 +42,14 @@ const router = createBrowserRouter([
       {
         path: "contact",
         element: <ContactPage />,
+      },
+      {
+        path: "process",
+        element: <Process/>,
+      },
+      {
+        path: "terms",
+        element: <LegalComponent/>,
       },
     ],
   },

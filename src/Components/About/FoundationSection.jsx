@@ -12,8 +12,8 @@ const FoundationSection = () => {
           
           {/* LEFT: The Visual Anchor */}
           <div className="w-full lg:w-1/2">
-            <div className="aspect-[4/3] lg:aspect-square bg-[#f5f5f7] rounded-[3rem] border border-gray-100 relative overflow-hidden shadow-2xl shadow-blue-900/5">
-               <div style={{ backgroundImage: `url(${foundationImage})` }} className="absolute inset-0 flex items-center justify-center text-gray-300 font-bold uppercase tracking-[0.2em] text-[10px]">
+            <div style={{ backgroundImage: `url(${foundationImage})` }}  className="aspect-4/3 bg-cover lg:aspect-square rounded-xl border border-gray-100 relative overflow-hidden shadow-2xl shadow-blue-900/5">
+               <div className="absolute inset-0 flex items-center justify-center text-gray-300 font-bold uppercase tracking-[0.2em] text-[10px]">
                 
                </div>
                

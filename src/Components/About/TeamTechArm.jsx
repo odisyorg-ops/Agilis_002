@@ -5,7 +5,7 @@ const TeamTechArm = () => {
     const roles = ["Product Owners", "Project Managers", "UI/UX Innovators", "Full-stack Developers", "Cloud Architects", "QA Experts"];
 
     return (
-        <section className="py-24 bg-[#0a0a0b] text-white overflow-hidden antialiased">
+        <section className="py-24 bg-[#0a0a0b] text-white overflow-hidden antialiased min-h-[100vh]">
             <div className="w-[95vw] md:w-[80vw] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                 <div className="space-y-10">
                     <h2 className="text-[40px] md:text-[52px] font-bold tracking-tighter leading-tight">
@@ -24,8 +24,7 @@ const TeamTechArm = () => {
                         ))}
                     </div>
                 </div>
-                <div style={{ backgroundImage: `url(${techImage})` }} className="aspect-square bg-cover rounded-xl " /> {/* Replaceable Image */}
-            </div>
+<div style={{ backgroundImage: `url(${techImage})` }} className="aspect-4/3 bg-cover bg-center rounded-xl " /> {/* Replaceable Image */}            </div>
         </section>
     );
 };

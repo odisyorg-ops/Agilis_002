@@ -10,6 +10,7 @@ import Solution from './Pages/Solution.jsx';
 import ContactPage from './Pages/ContactPage.jsx';
 import Blogs from './Pages/Blogs.jsx';
 import BlogPost from './Components/Blog/BlogPost.jsx';
+import Process from './Pages/Process.jsx';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: "blogs",
         element: <Blogs />,
+      },
+      {
+        path:"process",
+        element:<Process></Process>
       },
       {
         /* 2. Add the dynamic route for single blog posts */

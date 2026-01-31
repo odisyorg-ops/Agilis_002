@@ -30,10 +30,12 @@ const Footer = () => {
         
         {/* Top Section: Logo */}
         <div className="flex items-center gap-3 mb-12 md:mb-20">
-          <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-            <div className="w-5 h-5 border-2 border-black rounded-sm rotate-45"></div>
+          <div className="flex relative items-center justify-center">
+            <div>
+<img className="size-40 invert brightness-0 contrast-200" src="/src/assets/NEW - WITH BLUE - ALL - 2 MORE SPACE WITH SMALL ICON -F49F1C ORANGE - Copy copy-01.png" alt="AGILIS" />
+            </div>
           </div>
-          <span className="text-[24px] font-bold tracking-tighter">AGILIS</span>
+          <span className="text-[24px] font-bold tracking-tighter absolute left-28">AGILIS</span>
         </div>
 
         {/* MAIN CONTENT GRID */}

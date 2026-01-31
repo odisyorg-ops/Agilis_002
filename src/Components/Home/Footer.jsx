@@ -8,7 +8,7 @@ const Footer = () => {
   const navLinks = [
     { name: "About", href: "/about" },
     { name: "Solutions", href: "/services" },
-    { name: "Blog", href: "/portfolio" },
+    { name: "Blog", href: "/blogs" },
     { name: "Terms & Policy", href: "/blogs" },
     { name: "Pricing", href: "/pricing" },
     { name: "Contacts", href: "/contact" },

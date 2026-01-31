@@ -49,7 +49,6 @@ const Navbar = () => {
               Get in Touch
             </motion.button>
           </Link>
-
           {/* Mobile Menu Toggle */}
           <button
             className="md:hidden p-2 text-[#1d1d1f]"

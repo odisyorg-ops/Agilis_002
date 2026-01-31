@@ -31,7 +31,7 @@ const ContactUs = () => {
   return (
     <section className="relative py-24 px-4 overflow-hidden antialiased">
       
-      {/* Apple-style mesh background */}
+      {/* Background */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-blue-50 rounded-full blur-[120px] opacity-60" />
         <div className="absolute bottom-[5%] -right-[10%] w-[35%] h-[35%] bg-teal-50 rounded-full blur-[120px] opacity-50" />
@@ -39,8 +39,7 @@ const ContactUs = () => {
       </div>
 
       <div className="max-w-3xl mx-auto text-center">
-        
-        {/* Heading */}
+
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -51,13 +50,11 @@ const ContactUs = () => {
           Contact Us
         </motion.h2>
 
-        {/* Subheading */}
         <p className="mt-4 text-[#86868b] text-[17px] md:text-[19px] max-w-xl mx-auto leading-relaxed">
           Have an idea or a question?  
           Drop us a message and we’ll get back to you shortly.
         </p>
 
-        {/* Form Card */}
         <motion.form
           ref={formRef}
           onSubmit={sendEmail}
@@ -65,13 +62,9 @@ const ContactUs = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="
-            mt-14 bg-white/80 backdrop-blur-xl 
-            rounded-3xl shadow-xl 
-            p-8 md:p-12 
-            space-y-6 text-left
-          "
+          className="mt-14 bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl p-8 md:p-12 space-y-6 text-left"
         >
+
           {/* Name */}
           <div>
             <label className="block mb-2 text-sm font-medium text-[#1d1d1f]">
@@ -79,14 +72,10 @@ const ContactUs = () => {
             </label>
             <input
               type="text"
-              name="name"
+              name="user_name"
               required
               placeholder="John Doe"
-              className="
-                w-full px-4 py-3 rounded-xl 
-                border border-slate-200 
-                focus:outline-none focus:ring-2 focus:ring-blue-300
-              "
+              className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-300"
             />
           </div>
 
@@ -97,14 +86,10 @@ const ContactUs = () => {
             </label>
             <input
               type="email"
-              name="email"
+              name="user_email"
               required
               placeholder="you@example.com"
-              className="
-                w-full px-4 py-3 rounded-xl 
-                border border-slate-200 
-                focus:outline-none focus:ring-2 focus:ring-blue-300
-              "
+              className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-300"
             />
           </div>
 
@@ -118,27 +103,17 @@ const ContactUs = () => {
               rows="5"
               required
               placeholder="Tell us about your project..."
-              className="
-                w-full px-4 py-3 rounded-xl 
-                border border-slate-200 
-                resize-none
-                focus:outline-none focus:ring-2 focus:ring-blue-300
-              "
+              className="w-full px-4 py-3 rounded-xl border border-slate-200 resize-none focus:outline-none focus:ring-2 focus:ring-blue-300"
             />
           </div>
 
-          {/* Submit Button */}
+          {/* Submit */}
           <motion.button
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
             type="submit"
             disabled={status === "sending"}
-            className="
-              w-full bg-black text-white 
-              py-4 rounded-full 
-              text-[17px] font-semibold 
-              shadow-lg transition-all
-            "
+            className="w-full bg-black text-white py-4 rounded-full text-[17px] font-semibold shadow-lg transition-all"
           >
             {status === "sending" && "Sending..."}
             {status === "success" && "Message Sent ✓"}
@@ -146,7 +121,6 @@ const ContactUs = () => {
             {status === "idle" && "Send Message"}
           </motion.button>
 
-          {/* Status Message */}
           {status === "success" && (
             <p className="text-center text-green-600 text-sm font-medium">
               Thanks! We’ve received your message.
@@ -157,6 +131,7 @@ const ContactUs = () => {
               Failed to send message. Please try again.
             </p>
           )}
+
         </motion.form>
       </div>
     </section>

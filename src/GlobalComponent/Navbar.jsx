@@ -49,6 +49,14 @@ const Navbar = () => {
               Get in Touch
             </motion.button>
           </Link>
+          <Link to="/consultation" className="hidden md:block">
+            <motion.button
+              whileTap={{ scale: 0.98 }}
+              className="py-3 px-6 rounded-full bg-gradient-to-br from-[#0f172a] to-[#1e40af] text-white font-bold text-sm shadow-md shadow-blue-900/20"
+            >
+              Get Consultation
+            </motion.button>
+          </Link>
           {/* Mobile Menu Toggle */}
           <button
             className="md:hidden p-2 text-[#1d1d1f]"
@@ -101,6 +109,11 @@ const Navbar = () => {
               <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
                 <button className="w-full py-4 rounded-2xl bg-gradient-to-br from-[#0f172a] to-[#1e40af] text-white font-bold text-lg">
                   Get in Touch
+                </button>
+              </Link>
+              <Link to="/consultation" onClick={() => setIsMobileMenuOpen(false)}>
+                <button className="w-full py-4 rounded-2xl bg-gradient-to-br from-[#0f172a] to-[#1e40af] text-white font-bold text-lg">
+                  Get Consultation
                 </button>
               </Link>
             </div>

@@ -17,7 +17,7 @@ const TeamTechArm = () => {
                     </p>
                     <div className="grid grid-cols-2 gap-4">
                         {roles.map((role, i) => (
-                            <div key={i} className="flex items-center gap-2 text-sm font-medium text-gray-300">
+                            <div key={i} className="flex items-center gap-2 text-lg font-medium text-gray-300">
                                 <div className="w-1.5 h-1.5 bg-blue-500 rounded-full" />
                                 {role}
                             </div>

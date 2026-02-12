@@ -139,7 +139,7 @@ const ContactPage = () => {
                 <textarea
                   name="message"
                   className="textarea bg-white border-none rounded-xl h-32 w-full focus:ring-2 focus:ring-blue-500/20"
-                  placeholder="Tell us about your project requirements..."
+                  placeholder="What is the biggest bottleneck in your business right now?"
                   required
                 />
               </fieldset>

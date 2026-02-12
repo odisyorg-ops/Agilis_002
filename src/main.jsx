@@ -12,6 +12,7 @@ import Blogs from './Pages/Blogs.jsx';
 import BlogPost from './Components/Blog/BlogPost.jsx';
 import Process from './Pages/Process.jsx';
 import LegalComponent from './Pages/LegalComponent.jsx';
+import ConsultationPage from './Pages/ConsultationPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
       {
         path: "contact",
         element: <ContactPage />,
+      },
+      {
+        path: "consultation",
+        element: <ConsultationPage></ConsultationPage>,
       },
       {
         path: "process",

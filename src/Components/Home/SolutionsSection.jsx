@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { Link } from "react-router";
+import Meetingimg from "../../assets/Business Meeting Room.png";
 
 const solutionsData = [
   { title: "Investment strategies" },
@@ -28,7 +29,9 @@ const SolutionsSection = () => {
             className="w-full md:w-1/2 order-first md:order-last"
           >
             {/* Refined placeholder matching Apple's soft gray palette */}
-            <div className="aspect-4/3 w-full bg-[#f5f5f7] rounded-3xl border border-gray-100 shadow-xl"></div>
+            <div>
+            <img className="aspect-4/3 w-full bg-[#f5f5f7] rounded-3xl border border-gray-100 shadow-xl" src={Meetingimg} alt="teammeeting" />
+            </div>
           </motion.div>
 
           {/* Left Column: Text Content */}

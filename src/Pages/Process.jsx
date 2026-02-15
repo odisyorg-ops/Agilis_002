@@ -11,6 +11,7 @@ import img1 from "../assets/Professional Meeting Scene.png"
 import img2 from "../assets/Business Analytics in Action.png"
 import img3 from "../assets/Professional Discussion.png"
 import img4 from "../assets/Futuristic Robotic Hand.png"
+import { Link } from "react-router";
 
 /* ================= MOTION VARIANTS ================= */
 const fadeUp = {
@@ -125,12 +126,12 @@ const Process = () => {
               through seamless, innovative solutions.
             </p>
 
-            <a href="/contact" className="px-10 py-4 rounded-full bg-[#1d1d1f] text-white font-bold text-sm transition-all duration-500
+            <Link to="/contact" className="px-10 py-4 rounded-full bg-[#1d1d1f] text-white font-bold text-sm transition-all duration-500
               shadow-[0_15px_40px_-10px_rgba(30,64,175,0.4)]
               hover:shadow-[0_20px_50px_-10px_rgba(30,64,175,0.6)]
               hover:bg-blue-600 active:scale-95">
               Get Started
-            </a>
+            </Link>
           </motion.div>
 
           {/* Right Image */}

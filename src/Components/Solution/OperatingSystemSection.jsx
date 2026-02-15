@@ -20,40 +20,7 @@ const OperatingSystemSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           
           {/* Left Side: The Interactive Wheel Visual */}
-          <div className="relative flex justify-center items-center">
-            {/* SVG Wheel - Scalable and High-Resolution */}
-            <svg viewBox="0 0 400 400" className="w-full max-w-[450px] drop-shadow-2xl">
-              <circle cx="200" cy="200" r="180" fill="white" className="stroke-gray-100 stroke-1" />
-              {/* Central Logo Holder */}
-              <circle cx="200" cy="200" r="60" fill="white" className="stroke-gray-100 stroke-[0.5]" />
-              <text x="200" y="195" textAnchor="middle" className="text-[20px] font-bold fill-[#1d1d1f] tracking-tighter">prism</text>
-              <text x="200" y="215" textAnchor="middle" className="text-[22px] font-bold fill-blue-600 tracking-tighter">ERP</text>
-              
-              {/* Dynamic Segment Rendering */}
-              {modules.map((m, i) => {
-                const angle = (i * 360) / modules.length;
-                return (
-                  <g key={m.id} transform={`rotate(${angle} 200 200)`}>
-                    <path 
-                      d="M 200 80 A 120 120 0 0 1 270 100 L 200 200 Z" 
-                      className={`${m.color} opacity-80 hover:opacity-100 transition-opacity cursor-pointer`}
-                    />
-                    <text 
-                      x="200" y="65" 
-                      transform={`rotate(18 200 65)`} 
-                      className="text-[10px] font-bold fill-white uppercase tracking-tighter"
-                      textAnchor="middle"
-                    >
-                      {m.id}
-                    </text>
-                  </g>
-                );
-              })}
-            </svg>
-            
-            {/* Soft Sapphire Glow Behind Wheel */}
-            <div className="absolute -z-10 w-[300px] h-[300px] bg-blue-600/5 blur-[100px] rounded-full" />
-          </div>
+          <div><img className='size-[550px]' src="/src/assets/prismerp.png" alt="prism" /></div>
 
           {/* Right Side: Strategic Content */}
           <div className="space-y-12">

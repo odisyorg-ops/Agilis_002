@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
+import { Link } from "react-router";
 
 const Banner = () => {
     const stars = [
@@ -87,7 +88,10 @@ const Banner = () => {
                         shadow-[0_20px_50px_rgba(37,99,235,0.3)] hover:shadow-[0_20px_50px_rgba(37,99,235,0.4)]
                     "
                 >
-                    <span className="relative z-10">Get Started Now</span>
+                    <Link to="/contact">
+                                        <span className="relative z-10">Get Started Now</span>
+
+                    </Link>
                 </motion.button>
             </div>
         </section>

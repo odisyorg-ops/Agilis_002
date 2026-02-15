@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
+import { Link } from "react-router";
 
 const solutionsData = [
   { title: "Investment strategies" },
@@ -71,6 +72,7 @@ const SolutionsSection = () => {
             </div>
 
             {/* Apple-style Action Button */}
+            <Link to="/services">
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
@@ -78,6 +80,7 @@ const SolutionsSection = () => {
             >
               See all solutions
             </motion.button>
+            </Link>
           </motion.div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Map, PieChart, ShieldCheck } from "lucide-react";
+import { Link } from "react-router";
 
 const featureData = [
   {
@@ -78,6 +79,7 @@ const Features = () => {
         </div>
 
         {/* Learn More Button: Apple Secondary Style */}
+        <Link to="/services">
         <div className="mt-16 md:mt-24 text-center">
           <motion.button
             whileHover={{ scale: 1.02 }}
@@ -87,6 +89,7 @@ const Features = () => {
             Learn More
           </motion.button>
         </div>
+        </Link>
       </div>
     </section>
   );

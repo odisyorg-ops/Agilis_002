@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router';
 
 const valueData = [
     {
@@ -48,6 +49,7 @@ const Values = () => {
                             and values
                         </h2>
 
+                        <Link to="/consultation">
                         <motion.button
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
@@ -55,6 +57,7 @@ const Values = () => {
                         >
                             Get Expert Consultation
                         </motion.button>
+                        </Link>
                     </motion.div>
 
                     {/* Right Side: Clean List Section */}

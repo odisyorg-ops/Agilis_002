@@ -54,7 +54,7 @@ const ConsultationPage = () => {
           viewport={{ once: true }}
           className="bg-[#f5f5f7] p-8 md:p-12 rounded-xl"
         >
-          <form ref={formRef} onSubmit={sendEmail} className="space-y-8">
+          <form ref={formRef} onSubmit={sendEmail} className="space-y-8 text-black">
 
             {/* Basic Info */}
             <div className="grid md:grid-cols-2 gap-6">

@@ -11,8 +11,15 @@ import ContactPage from './Pages/ContactPage.jsx';
 import Blogs from './Pages/Blogs.jsx';
 import BlogPost from './Components/Blog/BlogPost.jsx';
 import Process from './Pages/Process.jsx';
-import LegalComponent from './Pages/LegalComponent.jsx';
 import ConsultationPage from './Pages/ConsultationPage.jsx';
+import Privacy from './Pages/Privacy.jsx';
+import PrivacyPolicy from './Pages/PrivacyPolicy.jsx';
+import CCPA from './Pages/CCPA.jsx';
+import CarbonNeutral from './Pages/CarbonNeutral.jsx';
+import CookiePolicy from './Pages/CookiePolicy.jsx';
+import CSR from './Pages/CSR.jsx';
+import GDPR from './Pages/GDPR.jsx';
+import ModernSlavery from './Pages/ModernSlavery.jsx';
 
 const router = createBrowserRouter([
   {
@@ -49,13 +56,42 @@ const router = createBrowserRouter([
         element: <ConsultationPage></ConsultationPage>,
       },
       {
+        path: "terms",
+        element: <PrivacyPolicy></PrivacyPolicy>,
+      },
+      {
+        path:"terms/privacy-policy",
+        element:<Privacy></Privacy>,
+      },
+      {
+        path:"terms/ccpa",
+        element:<CCPA></CCPA>,
+      },
+      {
+        path:"terms/cookie",
+        element:<CookiePolicy></CookiePolicy>,
+      },
+      {
+        path:"terms/csr",
+        element:<CSR></CSR>,
+      },
+      {
+        path:"terms/modern-slavery",
+        element:<ModernSlavery></ModernSlavery>,
+      },
+      {
+        path:"terms/gdpr",
+        element:<GDPR></GDPR>,
+      },
+      {
+        path:"terms/carbon-neutral",
+        element:<CarbonNeutral></CarbonNeutral>,
+      },
+      {
         path: "process",
         element: <Process/>,
       },
-      {
-        path: "terms",
-        element: <LegalComponent/>,
-      },
+      
     ],
   },
 ]);

@@ -32,7 +32,8 @@ const Footer = () => {
         <div className="flex items-center gap-3 mb-12 md:mb-20">
           <div className="flex  items-center justify-center">
 
-            <img className="w-[160px]" src="/public/Agilis-white.png" alt="AGILIS" />
+            {/* <img className="w-[160px]" src="/public/Agilis-white.png" alt="AGILIS"/> */}
+            <img className="w-[160px]" src="/public/Agilis-white.png" alt="Agilislogo" />
             <span className="text-[30px] font-bold tracking-tighter -ml-10">AGILIS</span>
 
           </div>

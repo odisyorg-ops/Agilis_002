@@ -32,7 +32,7 @@ const Footer = () => {
         <div className="flex items-center gap-3 mb-12 md:mb-20">
           <div className="flex  items-center justify-center">
 
-            <img className="size-40 invert brightness-0 contrast-200" src="/src/assets/NEW - WITH BLUE - ALL - 2 MORE SPACE WITH SMALL ICON -F49F1C ORANGE - Copy copy-01.png" alt="AGILIS" />
+            <img className="size-40 invert brightness-0 contrast-200" src="/src/assets/AGILIS.png" alt="AGILIS" />
             <span className="text-[24px] font-bold tracking-tighter -ml-10">AGILIS</span>
 
           </div>

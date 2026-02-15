@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import Agilislogo from "../assets/Agilis-black.png";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -15,7 +16,7 @@ const Navbar = () => {
 
         {/* Logo */}
         <div className="text-[24px] md:text-[26px] font-bold tracking-tighter flex items-center relative">
-          <Link to="/"><img className="w-[160px]" src="/public/Agilis-black.png" alt="AGILIS" /></Link>
+          <Link to="/"><img className="w-[160px]" src={Agilislogo} alt="AGILIS" /></Link>
           <Link to="/" className="text-[#1d1d1f] text-[30px] hover:opacity-70 absolute transition-opacity left-28">
             AGILIS
           </Link>

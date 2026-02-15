@@ -1,4 +1,5 @@
 import React from 'react';
+import prismerp from "../../assets/prismerp.png";
 
 const OperatingSystemSection = () => {
   const modules = [
@@ -20,7 +21,7 @@ const OperatingSystemSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           
           {/* Left Side: The Interactive Wheel Visual */}
-          <div><img className='size-[550px]' src="/src/assets/prismerp.png" alt="prism" /></div>
+          <div><img className='size-[550px]' src={prismerp} alt="prism" /></div>
 
           {/* Right Side: Strategic Content */}
           <div className="space-y-12">

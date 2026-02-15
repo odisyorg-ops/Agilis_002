@@ -15,7 +15,7 @@ const Navbar = () => {
 
         {/* Logo */}
         <div className="text-[24px] md:text-[26px] font-bold tracking-tighter flex items-center relative">
-          <Link to="/"><img className="size-40 grayscale brightness-0" src="/src/assets/AGILIS.png" alt="AGILIS" /></Link>
+          <Link to="/"><img className="size-40 grayscale brightness-0" src="/src/assets/Agilis2.svg" alt="AGILIS" /></Link>
           <Link to="/" className="text-[#1d1d1f] hover:opacity-70 absolute transition-opacity left-28">
             AGILIS
           </Link>

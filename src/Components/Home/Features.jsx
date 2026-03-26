@@ -1,23 +1,24 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Map, PieChart, ShieldCheck } from "lucide-react";
+import { LayoutDashboard, Network, TrendingUp } from "lucide-react";
 import { Link } from "react-router";
 
 const featureData = [
   {
-    title: "Investment strategies",
-    desc: "Our solutions give you full control to choose what’s best for your clients’ unique needs.",
-    icon: <Map className="text-blue-500" size={20} />,
+    title: "ERP & Business Software",
+    desc: "Streamline operations, improve efficiency, and enhance decision-making with customized ERP and business software solutions tailored to your unique organizational needs.",
+    icon: <LayoutDashboard className="text-blue-500" size={20} />,
   },
   {
-    title: "Financial planning",
-    desc: "Your clients will appreciate this straightforward approach to financial planning.",
-    icon: <PieChart className="text-blue-500" size={20} />,
+    title: "Telecommunication Software",
+    desc: "Power next-gen communication networks with innovative telecom software that enables real-time connectivity, seamless integration, and optimized service delivery.",
+    icon: <Network className="text-blue-500" size={20} />,
   },
   {
-    title: "Insurance & annuities",
-    desc: "Rely on our case design team to explore our extensive range of insurance products.",
-    icon: <ShieldCheck className="text-blue-500" size={20} />,
+    title: "Business Consulting & Services",
+    desc: "Drive growth and transformation through expert business consulting, offering strategic insights, operational improvements, and end-to-end service solutions.",
+    icon: <TrendingUp className="text-blue-500" size={20} />,
   }
 ];
 

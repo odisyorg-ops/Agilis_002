@@ -19,10 +19,7 @@ const HeroAbout = () => {
 
       <div className="w-[95vw] md:w-[80vw] mx-auto relative z-10">
         <div className="max-w-4xl">
-          {/* Top Label: Adds a touch of editorial structure */}
-          <span className="text-[12px] font-bold uppercase tracking-[0.1em] text-blue-200 mb-6 block">
-            The Agilis Story
-          </span>
+          
 
           <h1 
             className={`${headingSize} font-bold tracking-tighter leading-[1.05] mb-8 text-white`}

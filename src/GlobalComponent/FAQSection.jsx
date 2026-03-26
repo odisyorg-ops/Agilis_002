@@ -87,7 +87,7 @@ const FAQSection = () => {
                       <span className="text-sm font-medium opacity-40 tabular-nums pt-1">
                         {number}.
                       </span>
-                      <h3 className={`text-[20px] md:text-[24px] font-bold tracking-tight transition-all duration-300 ${isOpen ? 'text-white' : 'text-white/60 group-hover:text-white'}`}>
+                      <h3 className={`text-[20px] md:text-[24px] font-bold tracking-tight transition-all duration-300 ${isOpen ? 'text-white' : 'text-white/70 group-hover:text-white'}`}>
                         {faq.question}
                       </h3>
                     </div>
@@ -100,7 +100,7 @@ const FAQSection = () => {
                   {/* Expandable Content Container */}
                   <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-[1000px] pb-12' : 'max-h-0'}`}>
                     <div className="pl-12 max-w-2xl">
-                      <p className="text-[#86868b] text-[15px] md:text-[16px] leading-relaxed mb-6 font-medium">
+                      <p className="text-white/80 text-[15px] md:text-[16px] leading-relaxed mb-6 font-medium">
                         {faq.answer}
                       </p>
                       
@@ -115,7 +115,7 @@ const FAQSection = () => {
                               <li key={pIndex} className="flex gap-4 group/item">
                                 <span className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-2 flex-shrink-0 group-hover/item:scale-150 transition-transform" />
                                 <div className="text-[14px] md:text-[15px] leading-relaxed">
-                                  <span className="text-white font-bold">{point.label}:</span> <span className="text-[#86868b] font-medium">{point.text}</span>
+                                  <span className="text-white font-bold">{point.label}:</span> <span className="text-white/80 font-medium">{point.text}</span>
                                 </div>
                               </li>
                             ))}

@@ -33,7 +33,7 @@
 //         <div className="flex items-center gap-3 mb-12 md:mb-20">
 //           <div className="flex  items-center justify-center">
 
-            
+
 //             <img className="w-[160px]" src={Agilislogo} alt="Agilis Logo" />
 
 //             <span className="text-[30px] font-bold tracking-tighter -ml-10">AGILIS</span>
@@ -166,9 +166,11 @@ const Footer = () => {
       <div className="relative z-10 w-[90vw] md:w-[80vw] mx-auto pt-24 md:pt-32 flex-grow flex flex-col justify-center">
 
         {/* LOGO */}
-        <div className="flex items-center gap-3 mb-12 md:mb-20">
-          <img className="w-[160px]" src={Agilislogo} alt="Agilis Logo" />
-          <span className="text-[30px] font-bold tracking-tighter -ml-10">AGILIS</span>
+        <div className="font-bold tracking-tighter flex items-center relative mb-12 md:mb-20">
+          <Link to="/"><img className="w-[160px]" src={Agilislogo} alt="AGILIS" /></Link>
+          <Link to="/" className="text-white font-bold text-[30px] hover:opacity-70 absolute transition-opacity left-28">
+            AGILIS
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-end pb-20 border-b border-white/10">
@@ -186,7 +188,7 @@ const Footer = () => {
               className="font-bold leading-[1.02] tracking-tighter max-w-2xl"
             >
               Ready to unlock your potential and{" "}
-              <span className="bg-clip-text text-transparent bg-gradient-to-b from-blue-300 to-blue-600">
+              <span className="bg-clip-text text-transparent bg-linear-to-b from-blue-300 to-blue-600">
                 achieve your goals with us?
               </span>
             </h2>
@@ -248,9 +250,9 @@ const Footer = () => {
 
       <div className="relative z-10 w-[90vw] md:w-[80vw] mx-auto py-10 flex flex-col md:flex-row justify-between items-center gap-6 text-[#86868b] text-[14px]">
         <p>© 2026 AGILIS. All rights reserved</p>
-        <p className="font-medium">
+        {/* <p className="font-medium">
           Designed by <span className="text-white">ODISY</span>
-        </p>
+        </p> */}
       </div>
 
     </footer>

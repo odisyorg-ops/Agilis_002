@@ -21,7 +21,7 @@ const OperatingSystemSection = () => {
 
         {/* --- Hero Header --- */}
         <div className="text-center mb-16 md:mb-24">
-          <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-[#1d1d1f] mb-6">
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-[#1d1d1f] mb-6">
             A Complete Business <br className="hidden md:block" /> Operating System.
           </h2>
           <p className="text-[18px] md:text-[22px] text-[#86868b] font-medium max-w-4xl mx-auto leading-relaxed">

@@ -5,23 +5,23 @@ import { Link } from 'react-router';
 const valueData = [
     {
         number: "01.",
-        title: "Innovative",
-        desc: "To boost business growth, we prioritized the exploration of new ideas."
+        title: "Future-Proofed",
+        desc: "To drive sustainable growth, we prioritize the exploration of emerging technologies. We don’t just build software; we engineer scalable architectures that transform legacy challenges into digital advantages."
     },
     {
         number: "02.",
-        title: "Human-focused",
-        desc: "We prioritize human emotions and essential aspects of any organization."
+        title: "User-Centric DNA",
+        desc: "We prioritize the human experience behind the interface. By focusing on intuitive design and organizational workflow, we ensure our ERP solutions empower your team rather than complicate their day."
     },
     {
         number: "03.",
-        title: "Customer-first",
-        desc: "We're here round the clock to help with your needs and requests."
+        title: "Built for Continuity",
+        desc: "In a world of high-stakes deployments, we ensure your systems remain mission-ready. We focus on building resilient infrastructures that maintain peak performance, so your operations never miss a beat."
     },
     {
         number: "04.",
-        title: "Experts",
-        desc: "Our finance experts are ready to guide your business expansion."
+        title: "Domain Architects",
+        desc: "Our development leads and systems experts are ready to bridge the gap between technical complexity and your specific business expansion goals. We speak the language of both code and commerce."
     }
 ];
 
@@ -45,8 +45,10 @@ const Values = () => {
                             style={{ fontSize: headingSize }}
                             className="font-bold tracking-tighter leading-[1.02] mb-10 bg-clip-text text-transparent bg-gradient-to-b from-slate-400 to-[#1d1d1f] pb-2"
                         >
-                            Guided by purpose <br />
-                            and values
+                            Guided by purpose and <br />
+                            Engineering Excellence
+                            
+
                         </h2>
 
                         <Link to="/consultation">

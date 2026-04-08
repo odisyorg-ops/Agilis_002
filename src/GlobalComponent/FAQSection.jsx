@@ -8,12 +8,45 @@ const FAQSection = () => {
 
   const faqs = [
     {
+      question: "What does Agilis actually do?",
+      answer: "We provide integrated technology and ERP solutions that streamline your business operations. Our goal is to unify your data and processes into a single, intelligent ecosystem that helps you grow faster."
+    },
+    {
+      question: "How do your solutions improve our efficiency?",
+      answer: "By automating manual tasks and providing real-time data insights, we eliminate silos within your organization. This allows your team to focus on high-value strategy instead of administrative bottlenecks."
+    },
+    {
+      question: "Can Agilis scale with my business?",
+      answer: "Yes. Our technology is designed to be flexible. Whether you are expanding your team or entering new markets, our systems adapt to your changing requirements without needing a total overhaul."
+    },
+    {
       question: "How long does a consulting engagement last?",
       answer: "The duration depends on the scope of the project. Short-term projects typically last 2–3 months, while long-term engagements can extend to 6–12 months or more."
     },
     {
       question: "What is your process for analyzing a business?",
-      answer: "We start with an in-depth consultation to understand your goals, followed by a SWOT analysis, market research, and a review of financials and operations to identify key areas for improvement."
+      answer: `The Agilis Blueprint: Our Strategic Analysis Framework
+At Agilis, we don’t believe in forcing your business into a pre-packaged box. Our analysis process is designed to uncover the "Digital DNA" of your operations to ensure that our technology serves as a high-velocity accelerant for your growth.
+
+01. Infrastructure & Data Audit
+We begin with a deep-dive assessment of your Current State Architecture. We map your existing tech stack and legacy systems to identify "Data Debt"—the critical product and customer information currently trapped in static PDFs, siloed spreadsheets, and manual workarounds.
+
+The Objective: Bridge the gap between fragmented data and AI-readiness.
+02. Operational Friction Mapping
+We analyze your core commercial logic by auditing workflows across sales, procurement, and regulatory compliance. We pinpoint Process Bottlenecks—those specific moments where manual intervention or redundant data entry stalls your go-to-market velocity.
+
+The Objective: Isolate the friction points that are inflating overhead and compromising your data integrity.
+03. Scalability Stress-Testing
+We evaluate your current digital capabilities against your 3-year and 5-year commercial targets. We ask the mission-critical question: If your transaction volume or SKU count triples tomorrow, exactly where does your current system break?
+
+The Objective: Define the "Scalability Gap" between your present infrastructure and your future global ambitions.
+04. The Future-State Roadmap
+The final deliverable is a technical blueprint of your Optimal Future State. We provide a prioritized execution plan that balances "Quick Wins" (high-impact automations like self-service portals) with "Strategic Pillars" (core PIM integration and supply chain orchestration).
+
+The Objective: Align your software architecture with your business DNA to ensure Agilis acts as a permanent engine for commercial excellence.
+
+The Agilis Advantage
+Most providers try to fix business problems with more software. We fix them with better architecture. By auditing your operational reality first, we ensure that every module we deploy is engineered to support the unique complexities of your industry.`
     },
     {
       question: "Do you provide Technology consulting services?",

@@ -43,31 +43,31 @@ const Process = () => {
   const features = [
     {
       title: "Investment Strategies",
-      desc: "Data-driven portfolio management tailored to your risk tolerance and future goals.",
+      desc: "Data-driven portfolio management tailored to your risk tolerance and long-term financial goals.",
       icon: TrendingUp,
-      color: "bg-blue-500",
-      image: img1
+      image: img1,
+      tags: ["Portfolio Management", "Risk Profiling", "Asset Allocation"],
     },
     {
       title: "Financial Planning",
-      desc: "Comprehensive roadmaps that adapt to life's changes, ensuring long-term stability.",
+      desc: "Comprehensive roadmaps that adapt to life's changes, ensuring long-term stability and growth.",
       icon: PieChart,
-      color: "bg-indigo-500",
-      image: img2
+      image: img2,
+      tags: ["Retirement Planning", "Estate Strategy", "Tax Efficiency"],
     },
     {
       title: "Insurance & Annuities",
-      desc: "Robust protection plans designed to secure your assets and provide peace of mind.",
+      desc: "Robust protection plans designed to secure your assets and provide guaranteed income streams.",
       icon: Shield,
-      color: "bg-rose-500",
-      image: img3
+      image: img3,
+      tags: ["Life Insurance", "Fixed Annuities", "Asset Protection"],
     },
     {
       title: "Integrated Technology",
-      desc: "Cutting-edge platforms that give you real-time visibility and control over your wealth.",
+      desc: "Cutting-edge platforms that give you real-time visibility and full control over your wealth.",
       icon: Cpu,
-      color: "bg-teal-500",
-      image: img4
+      image: img4,
+      tags: ["Live Dashboards", "Client Portal", "Data Analytics"],
     },
   ];
 
@@ -347,7 +347,7 @@ const Process = () => {
 
             {/* End Goal */}
             <div className="mt-32 flex flex-col items-center">
-              
+
               <span className="text-[10px] font-black uppercase tracking-[0.1em] text-slate-900 bg-blue-100 z-20 py-2 px-4 rounded-sm">
                 Ready to Launch
               </span>
@@ -358,27 +358,31 @@ const Process = () => {
 
       {/* ================= SOLUTIONS ================= */}
       <section className="py-24 px-4 bg-gray-50">
-        <div className="w-[95vw] md:w-[80vw] mx-auto">
+        <div className="w-[85vw] mx-auto">
 
           {/* Header */}
-          <div className="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-6">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="max-w-2xl"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-[#1d1d1f] mb-6">
-                Strategize. Execute. <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#0f172a] to-[#1e40af]">Thrive.</span>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-14"
+          >
+            <p className="text-xs font-semibold uppercase tracking-widest text-blue-600 mb-3">Our Solutions</p>
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-[#1d1d1f] leading-tight">
+                Strategize. Execute.{" "}
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#0f172a] to-[#1e40af]">
+                  Thrive.
+                </span>
               </h2>
-              <p className="text-[#86868b] text-lg leading-relaxed max-w-lg">
-                Our integrated solutions empower you to deliver value, clarity, and confidence in an unpredictable market.
+              <p className="text-[#86868b] text-base leading-relaxed max-w-sm">
+                Our integrated solutions empower you to deliver value, clarity, and confidence.
               </p>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
 
-          {/* 2x2 Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* 2×2 Image Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5" style={{ gridAutoRows: '420px' }}>
             {features.map((item, i) => (
               <motion.div
                 key={i}
@@ -386,38 +390,48 @@ const Process = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.6 }}
-                className="group relative h-[400px] overflow-hidden rounded-lg md:rounded-xl shadow-lg"
+                className="group relative rounded-2xl overflow-hidden"
               >
-                {/* Background Image Layer */}
-                <div
-                  className="absolute inset-0 bg-green-600 bg-cover bg-center transition-transform duration-700 "
-                  style={{
-                    backgroundImage: `url(${item.image})`, // Replace locally later
-                    // backgroundColor: 'green'
-                  }}
+                {/* Image */}
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
 
-                {/* Black Gradient Overlay (Above Img, Under Text) */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/88 via-black/45 to-black/10" />
 
-                {/* Content Layer */}
-                <div className="relative h-full p-8 flex flex-col justify-end">
-                  <div className="mb-4">
-                    {/* Optional Icon */}
-                    <div className="w-10 h-10 rounded-lg bg-white/10 backdrop-blur-md flex items-center justify-center mb-4 border border-white/20">
-                      <item.icon size={20} className="text-white" />
-                    </div>
+                {/* Card Number */}
+                <span className="absolute top-5 right-6 text-[11px] font-semibold text-white/40 tracking-widest">
+                  0{i + 1}
+                </span>
 
-                    <h3 className="text-2xl font-bold text-white mb-2">
-                      {item.title}
-                    </h3>
-
-                    <p className="text-gray-300 text-sm leading-relaxed max-w-md duration-300">
-                      {item.desc}
-                    </p>
+                {/* Content */}
+                <div className="absolute inset-0 flex flex-col justify-end p-8">
+                  {/* Icon */}
+                  <div className="w-10 h-10 rounded-xl bg-white/10 border border-white/20 backdrop-blur-sm flex items-center justify-center mb-4">
+                    <item.icon size={18} className="text-white" />
                   </div>
 
+                  <h3 className="text-2xl font-bold text-white mb-2 tracking-tight">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-white/70 leading-relaxed mb-5 max-w-sm">
+                    {item.desc}
+                  </p>
 
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2">
+                    {item.tags.map((tag, t) => (
+                      <span
+                        key={t}
+                        className="text-[11px] font-medium text-white/75 bg-white/10 border border-white/18 backdrop-blur-sm rounded-full px-3 py-1"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </motion.div>
             ))}

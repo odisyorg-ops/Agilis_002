@@ -2,19 +2,20 @@ import React, { useState, useCallback, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import Agilislogo from "../assets/Agilis-black.png";
+// import Agilislogo from "../assets/Agilis-black.png";
+import logo from "../assets/qKOsQ01.svg"
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 
 const NAV_LINKS = [
-  { label: "About",   to: "/about"   },
+  { label: "About", to: "/about" },
   { label: "Services", to: "/services" },
   { label: "Process", to: "/process" },
-  { label: "Blog",    to: "/blogs"   },
+  { label: "Blog", to: "/blogs" },
 ];
 
 const CTA_BUTTONS = [
-  { label: "Get in Touch",    to: "/contact"      },
+  { label: "Get in Touch", to: "/contact" },
   { label: "Get Consultation", to: "/consultation" },
 ];
 
@@ -22,12 +23,12 @@ const CTA_BUTTONS = [
 
 const mobileMenuVariants = {
   closed: { height: 0, opacity: 0 },
-  open:   { height: "auto", opacity: 1 },
+  open: { height: "auto", opacity: 1 },
 };
 
 const mobileItemVariants = {
   closed: { x: -16, opacity: 0 },
-  open:   (i) => ({ x: 0, opacity: 1, transition: { delay: i * 0.06 } }),
+  open: (i) => ({ x: 0, opacity: 1, transition: { delay: i * 0.06 } }),
 };
 
 // ─── Sub-components ───────────────────────────────────────────────────────────
@@ -54,8 +55,8 @@ const CTAButton = ({ to, label, onClick, fullWidth = false }) => (
         "rounded-full bg-gradient-to-br from-[#0f172a] to-[#1e40af]",
         "text-white font-semibold shadow-md shadow-blue-900/20",
         "transition-shadow duration-200 hover:shadow-lg hover:shadow-blue-900/30",
-        fullWidth 
-          ? "w-full py-4 rounded-2xl text-base" 
+        fullWidth
+          ? "w-full py-4 rounded-2xl text-base"
           : "text-xs xl:text-sm py-2 px-4 xl:py-[10px] xl:px-5",
       ].join(" ")}
     >
@@ -128,19 +129,17 @@ const Navbar = () => {
       aria-label="Main navigation"
     >
       {/* ── Desktop Bar ── */}
-      <div className="w-full max-w-[1400px] mx-auto h-20 flex items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-[80vw] mx-auto h-20 flex items-center justify-between px-4 sm:px-6 lg:px-8">
 
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 group shrink-0">
           <img
-            src={Agilislogo}
+            src={logo}
             alt="Agilis Logo"
-            className="w-[120px] sm:w-[140px] md:w-[160px] select-none"
+            className="w-[150px] sm:w-[300px] md:w-[310px] select-none brightness-0 -ml-[15%] sm:-ml-[20%]"
+            style={{ clipPath: 'inset(10% 25% 10% 20%)' }}
             draggable={false}
           />
-          <span className="text-[#1d1d1f] text-[20px] sm:text-[24px] md:text-[26px] font-bold tracking-tight group-hover:opacity-70 transition-opacity duration-200 hidden sm:block">
-            AGILIS
-          </span>
         </Link>
 
         {/* Desktop Nav Links */}

@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { MapPin, Globe } from "lucide-react";
 import emailjs from "@emailjs/browser";
+import mapp from "../assets/mappp.png"
 /**
  * REUSABLE UI HELPERS
  * Passing 'name' prop is crucial for EmailJS to detect the input
@@ -19,7 +20,7 @@ const FormField = ({
       {label} {required && "*"}
     </legend>
     <input
-      name={name} 
+      name={name}
       type={type}
       className="input bg-white border-none rounded-md w-full text-black focus:ring-2 focus:ring-blue-500/20"
       placeholder={placeholder}
@@ -64,35 +65,57 @@ const ContactPage = () => {
     <main className="h-screen bg-white antialiased overflow-hidden pb-[1500px] md:pb-[900px]">
       <div className="w-[95vw] md:w-[80vw] mx-auto py-20 md:py-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
-          
+
           {/* CONTACT DETAILS (Left Side) */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="space-y-12"
+            /* justify-between pushes the text to the top and the map to the bottom */
+            className="flex flex-col justify-between h-full min-h-full space-y-12"
           >
-            <div className="space-y-6">
-              <div className="flex items-center gap-4 text-blue-600">
-                <MapPin size={24} />
-                <h3 className="text-xl font-bold tracking-tight text-[#1d1d1f]">
-                  Main office
-                </h3>
+            {/* TOP SECTION: Text Content */}
+            <div className="space-y-12">
+              <div className="space-y-6">
+                <div className="flex items-center gap-4 text-blue-600">
+                  <MapPin size={24} />
+                  <h3 className="text-xl font-bold tracking-tight text-[#1d1d1f]">
+                    Main office
+                  </h3>
+                </div>
+                <p className="text-[#86868b] text-lg leading-relaxed max-w-sm">
+                  63/66 Hatton Garden, Fifth Floor Suite 23, London, EC1N 8LE United Kingdom
+                </p>
               </div>
-              <p className="text-[#86868b] text-lg leading-relaxed max-w-sm">
-                63/66 Hatton Garden, Fifth Floor Suite 23, London, EC1N 8LE United Kingdom
-              </p>
+
+              <div className="space-y-6">
+                <div className="flex items-center gap-4 text-blue-400">
+                  <Globe size={24} />
+                  <h3 className="text-xl font-bold tracking-tight text-[#1d1d1f]">
+                    Middle East branch
+                  </h3>
+                </div>
+                <p className="text-[#86868b] text-lg italic">Coming soon</p>
+              </div>
             </div>
 
-            <div className="space-y-6">
-              <div className="flex items-center gap-4 text-blue-400">
-                <Globe size={24} />
-                <h3 className="text-xl font-bold tracking-tight text-[#1d1d1f]">
-                  Middle East branch
-                </h3>
+            {/* BOTTOM SECTION: Map Image */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              viewport={{ once: true }}
+              /* mt-auto acts as a safety push to the bottom */
+              className="relative w-full mt-auto pt-8"
+            >
+              <div className="overflow-hidden rounded-2xl border border-[#f5f5f7] shadow-sm">
+                <img
+                  src={mapp}
+                  alt="Office location map"
+                  className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700 ease-out"
+                />
               </div>
-              <p className="text-[#86868b] text-lg italic">Coming soon</p>
-            </div>
+            </motion.div>
           </motion.div>
 
           {/* CONTACT FORM (Right Side) */}
@@ -103,7 +126,7 @@ const ContactPage = () => {
             className="bg-[#f5f5f7] p-8 md:p-12 rounded-xl"
           >
             <form ref={formRef} onSubmit={sendEmail} className="space-y-6">
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <FormField label="Name" name="user_name" required placeholder="John Doe" />
                 <FormField label="Company / Organisation" name="user_company" placeholder="Acme Inc." />
@@ -150,11 +173,10 @@ const ContactPage = () => {
                   whileTap={{ scale: 0.98 }}
                   type="submit"
                   disabled={status === "sending" || status === "success"}
-                  className={`w-full py-4 rounded-full font-bold text-lg text-white transition-all ${
-                    status === "success" 
-                      ? "bg-green-600 cursor-default" 
-                      : "bg-gradient-to-br from-[#0f172a] to-[#1e40af]"
-                  }`}
+                  className={`w-full py-4 rounded-full font-bold text-lg text-white transition-all ${status === "success"
+                    ? "bg-green-600 cursor-default"
+                    : "bg-gradient-to-br from-[#0f172a] to-[#1e40af]"
+                    }`}
                 >
                   {status === "idle" && "Send Message"}
                   {status === "sending" && "Sending..."}
@@ -164,7 +186,7 @@ const ContactPage = () => {
 
                 {/* Status Messages for better UX */}
                 {status === "success" && (
-                  <motion.p 
+                  <motion.p
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     className="text-center text-green-600 text-sm font-medium"
@@ -173,7 +195,7 @@ const ContactPage = () => {
                   </motion.p>
                 )}
                 {status === "error" && (
-                  <motion.p 
+                  <motion.p
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     className="text-center text-red-600 text-sm font-medium"

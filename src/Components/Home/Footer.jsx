@@ -138,6 +138,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router";   // ✅ FIXED
 import Agilislogo from "../../assets/Agilis-white.png";
+import logo from "../../assets/qKOsQ01.svg"
 
 const Footer = () => {
 
@@ -167,10 +168,16 @@ const Footer = () => {
 
         {/* LOGO */}
         <div className="font-bold tracking-tighter flex items-center relative mb-12 md:mb-20">
-          <Link to="/"><img className="w-[160px]" src={Agilislogo} alt="AGILIS" /></Link>
-          <Link to="/" className="text-white font-bold text-[30px] hover:opacity-70 absolute transition-opacity left-28">
-            AGILIS
+          <Link to="/">
+            <img
+              src={logo}
+              alt="Agilis Logo"
+              className="w-[150px] sm:w-[300px] md:w-[310px] select-none brightness-0 invert -ml-[15%] sm:-ml-[20%]"
+              style={{ clipPath: 'inset(10% 25% 10% 20%)' }}
+              draggable={false}
+            />
           </Link>
+
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-end pb-20 border-b border-white/10">

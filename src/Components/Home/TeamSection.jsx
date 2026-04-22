@@ -15,7 +15,7 @@ const TEAM_MEMBERS = [
     image: harun,
   },
   {
-    name: "Kashem",
+    name: "Kash",
     role: "CTO & Founder",
     image: kasem,
   },

@@ -25,28 +25,26 @@ const FAQSection = () => {
     },
     {
       question: "What is your process for analyzing a business?",
-      answer: `The Agilis Blueprint: Our Strategic Analysis Framework
-At Agilis, we don’t believe in forcing your business into a pre-packaged box. Our analysis process is designed to uncover the "Digital DNA" of your operations to ensure that our technology serves as a high-velocity accelerant for your growth.
-
-01. Infrastructure & Data Audit
-We begin with a deep-dive assessment of your Current State Architecture. We map your existing tech stack and legacy systems to identify "Data Debt"—the critical product and customer information currently trapped in static PDFs, siloed spreadsheets, and manual workarounds.
-
-The Objective: Bridge the gap between fragmented data and AI-readiness.
-02. Operational Friction Mapping
-We analyze your core commercial logic by auditing workflows across sales, procurement, and regulatory compliance. We pinpoint Process Bottlenecks—those specific moments where manual intervention or redundant data entry stalls your go-to-market velocity.
-
-The Objective: Isolate the friction points that are inflating overhead and compromising your data integrity.
-03. Scalability Stress-Testing
-We evaluate your current digital capabilities against your 3-year and 5-year commercial targets. We ask the mission-critical question: If your transaction volume or SKU count triples tomorrow, exactly where does your current system break?
-
-The Objective: Define the "Scalability Gap" between your present infrastructure and your future global ambitions.
-04. The Future-State Roadmap
-The final deliverable is a technical blueprint of your Optimal Future State. We provide a prioritized execution plan that balances "Quick Wins" (high-impact automations like self-service portals) with "Strategic Pillars" (core PIM integration and supply chain orchestration).
-
-The Objective: Align your software architecture with your business DNA to ensure Agilis acts as a permanent engine for commercial excellence.
-
-The Agilis Advantage
-Most providers try to fix business problems with more software. We fix them with better architecture. By auditing your operational reality first, we ensure that every module we deploy is engineered to support the unique complexities of your industry.`
+      answer: "The Agilis Blueprint is our Strategic Analysis Framework. We don’t believe in forcing your business into a pre-packaged box; instead, we uncover the 'Digital DNA' of your operations to ensure technology serves as a high-velocity accelerant for your growth.",
+      listHeader: "The Agilis Blueprint Steps:",
+      points: [
+        {
+          label: "Infrastructure & Data Audit",
+          text: "We map your existing tech stack to identify 'Data Debt' and bridge the gap between fragmented legacy systems and AI-readiness."
+        },
+        {
+          label: "Operational Friction Mapping",
+          text: "We audit workflows across sales and procurement to isolate process bottlenecks that inflate overhead and compromise data integrity."
+        },
+        {
+          label: "Scalability Stress-Testing",
+          text: "We evaluate your infrastructure against 3-5 year targets to define the 'Scalability Gap' and ensure your system won't break as you grow."
+        },
+        {
+          label: "The Future-State Roadmap",
+          text: "We deliver a technical blueprint and prioritized execution plan, balancing immediate 'Quick Wins' with long-term strategic pillars."
+        }
+      ]
     },
     {
       question: "Do you provide Technology consulting services?",
@@ -90,13 +88,13 @@ Most providers try to fix business problems with more software. We fix them with
     <section className="py-32 bg-[#0a0a0b] text-white px-4 antialiased">
       <div className="w-[95vw] md:w-[80vw] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
-          
+
           {/* Left Side: Sticky Header */}
           <div className="lg:col-span-5 lg:sticky lg:top-32 h-fit">
             <h2 className="text-[42px] md:text-[56px] font-bold tracking-tighter leading-[1.1] mb-10">
               Your questions, our <br /> expert answers
             </h2>
-            
+
             <Link to="/contact">
               <button className="px-8 py-4 rounded-full bg-white text-black font-bold text-sm hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.1)]">
                 Get Expert Consultation
@@ -112,7 +110,7 @@ Most providers try to fix business problems with more software. We fix them with
 
               return (
                 <div key={index} className="border-b border-white/20">
-                  <button 
+                  <button
                     onClick={() => setOpenIndex(isOpen ? -1 : index)}
                     className="w-full py-8 flex items-start justify-between text-left group"
                   >
@@ -136,7 +134,7 @@ Most providers try to fix business problems with more software. We fix them with
                       <p className="text-white/80 text-[15px] md:text-[16px] leading-relaxed mb-6 font-medium">
                         {faq.answer}
                       </p>
-                      
+
                       {/* Sub-points / Bulleted List Rendering */}
                       {faq.points && (
                         <div className="mt-8 animate-in fade-in slide-in-from-top-4 duration-700">
